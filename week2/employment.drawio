@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.5.2">
+  <diagram name="Page-1" id="E1xFK3DD71X6Rb_Am1uy">
+    <mxGraphModel dx="1603" dy="872" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="class1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;whiteSpace=wrap;" value="Department&lt;br&gt;&lt;br&gt;&lt;div&gt;--&lt;br&gt;- name : String&lt;br&gt;--&lt;br&gt;+ getName() : String&lt;br&gt;+ setName(name : String) : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="160" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="class2" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;whiteSpace=wrap;" value="EmploymentType&lt;br&gt;&lt;br&gt;&lt;div&gt;--&lt;br&gt;- type : String&lt;br&gt;--&lt;br&gt;+ getType() : String&lt;br&gt;+ setType(type : String) : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="480" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="class3" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;whiteSpace=wrap;" value="Employee&lt;br&gt;&lt;br&gt;&lt;div&gt;--&lt;br&gt;- id : int&lt;br&gt;- name : String&lt;br&gt;- salary : double&lt;br&gt;- static totalEmployees : int&lt;br&gt;--&lt;br&gt;+ getId() : int&lt;br&gt;+ getName() : String&lt;br&gt;+ setSalary(salary : double) : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="220" x="304" y="320" as="geometry">
+            <mxRectangle height="170" width="220" x="304" y="280" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="class4" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=1;collapsible=1;marginBottom=0;html=1;whiteSpace=wrap;" value="EmployeeService&lt;br&gt;&lt;br&gt;&lt;div&gt;--&lt;br&gt;- employees : Map&amp;lt;Integer, Employee&amp;gt;&lt;br&gt;--&lt;/div&gt;&lt;div&gt;+ addEmployee(emp : Employee) : void&lt;br&gt;+ getEmployee(id : int) : Employee&lt;br&gt;+ raiseSalary(id : int, percent : double) : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="280" x="274" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="class3" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="class1" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="320" y="240" as="sourcePoint" />
+            <mxPoint x="160" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="class3" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="class2" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="320" y="240" as="sourcePoint" />
+            <mxPoint x="480" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="class4" style="endArrow=open;dashed=1;endFill=0;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="class3" value="Dependency">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="320" y="490" as="sourcePoint" />
+            <mxPoint x="320" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lsp2nMd7z9f0oSlxPSQZ-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Aggregation" vertex="1">
+          <mxGeometry height="30" width="60" x="554" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="lsp2nMd7z9f0oSlxPSQZ-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Aggregation" vertex="1">
+          <mxGeometry height="30" width="60" x="214" y="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
